@@ -1,0 +1,89 @@
+pizzaRecipes = [
+    {
+        id: 1,
+        flavor: 'Cheese Pizza',
+        ingredients: [
+            'White Sauce',
+            'Mozzarella Cheese'
+        ],
+        price: 500
+    },
+    {
+        id: 2,
+        flavor: 'Bacon Pizza',
+        ingredients: [
+            'White Sauce',
+            'Mozzarella Cheese',
+            'Bacon',
+            'Parsley Leaves'
+        ],
+        price: 700
+    },
+    {
+        id: 3,
+        flavor: 'Pepperoni Pizza',
+        ingredients: [
+            'Red Sauce',
+            'Mozzarella Cheese',
+            'Pepperoni'
+        ],
+        price: 600
+    },
+    {
+        id: 4,
+        flavor: 'Hawaiian Pizza',
+        ingredients: [
+            'Red Sauce',
+            'Mozzarella Cheese',
+            'Ham',
+            'Pineapple Chunks'
+        ],
+        price: 700
+    },
+    {
+        id: 5,
+        flavor: 'Supreme Pizza',
+        ingredients: [
+            'Red Sauce',
+            'Mozzarella Cheese',
+            'Green Bell Pepper',
+            'Ham',
+            'Beef'
+        ],
+        price: 800
+    }
+]
+
+customersImgs= [
+    "imgs/customers/0.png",
+    "imgs/customers/1.png",
+    "imgs/customers/2.png",
+    "imgs/customers/3.png",
+    "imgs/customers/4.png",
+    "imgs/customers/5.png",
+    "imgs/customers/6.png",
+    "imgs/customers/7.png",
+    "imgs/customers/8.png",
+]
+
+prepTableIngredients = [
+    {ingName: Green Bell Pepper, source: "imgs/ingredients/Green Bell Pepper.png"},
+    {ingName: Parsley Leaves, source: "imgs/ingredients/Parsley Leaves.png"},
+    {ingName: Pineapple Chunks, source: "imgs/ingredients/Pineapple Chunks.png"},
+    {ingName: Mozarella Cheese, source: "imgs/ingredients/Mozarella Cheese.png"},
+    {ingName: Pepperoni, source: "imgs/ingredients/Pepperoni.png"},
+    {ingName: Beef, source: "imgs/ingredients/Beef.png"},
+    {ingName: Bacon, source: "imgs/ingredients/Bacon.png"},
+    {ingName: Ham, source: "imgs/ingredients/Ham.png"},
+]
+
+
+<a href="https://www.vecteezy.com/free-vector/cheese">Cheese Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/pepperoni">Pepperoni Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/ham">Ham Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/pineapple-slice">Pineapple Slice Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/onion">Onion Vectors by Vecteezy</a>
+<a href="https://www.vecteezy.com/free-vector/parsley">Parsley Vectors by Vecteezy</a>
+
+
+<a href='https://www.freepik.com/vectors/food'>Food vector created by pch.vector - www.freepik.com</a>

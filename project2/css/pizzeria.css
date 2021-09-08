@@ -1,0 +1,399 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 500;
+  color: rgb(50, 50, 50);
+  font-size: 14px;
+}
+
+#mainContainer {
+  width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* gameDiv CSS */
+#gameDiv {
+  width: 1000px;
+  height: 620px;
+  padding: 5px;
+  margin: 20px auto;
+  display: none;
+  position: absolute;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  border: 5px solid rgb(117, 231, 161);
+  border-radius: 15px;
+}
+#infoDiv {
+  width: 60%;
+  height: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+}
+#statsDiv {
+  width: 60%;
+  height: 300px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+/* infoDiv > statsDiv CSS */
+#gameNameDiv {
+  width: 100%;
+  height: 100px;
+  display: flex;
+}
+.mariaimg {
+  width: 100px;
+  object-fit: contain;
+}
+.logoimg {
+  width: 250px;
+  object-fit: contain;
+}
+#salesDiv,
+#timerCont,
+#customersServedDiv {
+  width: 100%;
+  height: 60px;
+  padding: 0 0 0 15px;
+  border-radius: 15px;
+  background-color: rgb(216, 255, 204);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#statsDiv p {
+  font-size: 18px;
+  font-weight: 600;
+  width: 55%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-right: 3px solid rgb(117, 231, 161);
+  color: rgb(11, 161, 69);
+}
+#timerDiv,
+#salesSubDiv {
+  font-size: 36px;
+  width: 45%;
+  font-weight: 700;
+  color: rgb(255, 97, 109);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+#salesSubDiv {
+  position: relative;
+}
+#sales {
+  font-size: 22px;
+  font-weight: 700;
+  color: rgb(100, 105, 102);
+}
+#salesPlus,
+#customersPlus {
+  width: 100%;
+  height: 60px;
+  background-color: rgb(11, 161, 69);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+#customersServedSubDiv {
+  width: 45%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#imgwithcounter {
+  display: flex;
+  align-items: center;
+}
+.customerCounter {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px 0 0;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgb(255, 211, 123);
+}
+#customersServed {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 5px 0;
+  color: rgb(100, 105, 102);
+  text-align: center;
+}
+
+/* Animation */
+.fade {
+  animation: fade ease-out 1s;
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* infoDiv > customerDiv CSS */
+#customerDiv {
+  width: 40%;
+  height: 300px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+#customerImgDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#customerImg {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 8px solid rgb(255, 211, 123);
+}
+#customerDiv p {
+  margin: 10px 0 0 0;
+}
+#customerOrderDiv {
+  width: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 700;
+  color: rgb(255, 97, 109);
+}
+
+/* recipeBookDiv CSS */
+#recipeBookDiv {
+  background-color: rgb(216, 255, 204);
+  border-radius: 15px;
+  width: 99.5%;
+  height: 95px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.chefsrecipetitle {
+  width: 20%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+.norm,
+.emph {
+  color: rgb(7, 110, 47);
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  line-height: 65%;
+}
+.emph {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#recipeDiv {
+  width: 80%;
+  border-left: 2px solid rgb(117, 231, 161);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Ingredient Holders */
+.ingredientHolder {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  margin: 2px;
+  border: 3.5px solid rgb(255, 192, 55);
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+.ingredientImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#ingredientsDiv button:hover {
+  border: 4.5px solid rgb(255, 97, 109);
+}
+#ingredientsDiv button:active {
+  border: 7px solid rgb(255, 97, 109);
+}
+#ingredientsDiv button:disabled {
+  opacity: 20%;
+  border: 3px solid rgb(156, 156, 156);
+}
+
+/* chefTable Divisions CSS */
+#chefTableDiv {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+#ingredientsMainDiv,
+#prepTableMainDiv {
+  width: 49.75%;
+  height: 200px;
+  background-color: rgb(252, 248, 200);
+  border-radius: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+#prepTableMainDiv {
+  position: relative;
+}
+#ingredientsMainDiv p,
+#prepTblHeader {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: rgb(7, 110, 47);
+  font-weight: 600;
+  margin: 2px 0 5px 0;
+  padding-bottom: 3px;
+  border-bottom: 2px solid rgb(117, 231, 161);
+}
+#ingredientsDiv {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+#prepTableDiv {
+  width: 100%;
+  height: 110px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#errorMsgDiv {
+  width: 100%;
+  height: 32px;
+  background-color: rgb(255, 97, 109);
+  color: white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#prepTableBtnsDiv {
+  width: 100%;
+  height: 40px;
+  margin: 4px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+/* Clear, Bake, Serve, Play Again Buttons */
+#clearBtn,
+#servePizzaBtn,
+#bakeBtn {
+  width: 150px;
+  height: 30px;
+  font-weight: 900;
+  color: white;
+  border-radius: 10px;
+}
+#clearBtn {
+  background-color: rgb(253, 182, 30);
+  border: 3px solid rgb(253, 182, 30);
+}
+#servePizzaBtn,
+#bakeBtn {
+  background-color: rgb(255, 97, 109);
+  border: 3px solid rgb(255, 97, 109);
+}
+#prepTableBtnsDiv button:hover,
+#servePizzaBtn:hover {
+  font-size: 16px;
+  border: 3px solid rgb(11, 161, 69);
+  background-color: rgb(11, 161, 69);
+}
+#prepTableBtnsDiv button:active,
+#servePizzaBtn:active {
+  font-size: 14px;
+}
+#prepTableBtnsDiv button:disabled,
+#servePizzaBtn:disabled {
+  opacity: 50%;
+  font-size: 14px;
+  border: 3px solid rgb(100, 105, 102);
+  background-color: rgb(207, 207, 207);
+}
+
+/* bakedPizzaDiv CSS */
+#bakedPizzaDiv {
+  width: 39.5%;
+  height: 395px;
+  background-color: rgb(216, 255, 204);
+  border-radius: 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  margin-left: 0.5%;
+  margin-bottom: 0.5%;
+}
+#bakedPizzaImgDiv {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+}
+.bakedPizzaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 15px;
+}
+#servePizzaBtnDiv {
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+#servePizzaBtn {
+  text-align: center;
+}

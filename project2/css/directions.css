@@ -1,0 +1,232 @@
+#directionsDiv {
+  width: 1000px;
+  height: 620px;
+  margin: 20px auto;
+  background-color: white;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+}
+.mariawithtitle {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+.game-title {
+  width: 500px;
+  height: 200px;
+  border-top: 10px solid rgb(255, 211, 123);
+  border-bottom: 10px solid rgb(255, 211, 123);
+  display: flex;
+  align-items: center;
+}
+.game-title img {
+  width: 100%;
+  object-fit: cover;
+}
+.maria-img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  align-self: flex-start;
+}
+.maria-holder {
+  height: 100%;
+  padding-top: 80px;
+  display: flex;
+}
+.directions {
+  width: 900px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+  color: rgb(11, 161, 69);
+  margin-bottom: 10px;
+}
+#page1 .statements {
+  width: 600px;
+}
+.statements {
+  text-align: center;
+  width: 600px;
+  margin: 20px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+.statements p {
+  font-size: 18px;
+  color: rgb(78, 78, 78);
+}
+.specifics {
+  font-size: 18px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.demopic {
+  width: 600px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+.demopic img {
+  width: 100%;
+  object-fit: contain;
+}
+.forbutton {
+  width: 500px;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.forbutton button {
+  padding: 10px 20px;
+  width: 220px;
+  height: 50px;
+  font-weight: 900;
+  color: white;
+  background-color: rgb(255, 97, 109);
+  border: 3px solid rgb(255, 97, 109);
+  border-radius: 10px;
+  font-size: 18px;
+}
+#page1 .for-next-page {
+  background-color: rgb(255, 192, 55);
+  border: 3px solid rgb(255, 192, 55);
+}
+.forbutton button:hover,
+#page1 .for-next-page:hover {
+  font-size: 20px;
+  border: 3px solid rgb(11, 161, 69);
+  background-color: rgb(11, 161, 69);
+}
+.forbutton button:active,
+#page1 .for-next-page:active {
+  font-size: 19px;
+}
+
+#page2,
+#page3,
+#page4,
+#page5,
+#page6 {
+  display: none;
+}
+#gameDiv {
+  display: flex;
+}
+
+/* GameOverDiv */
+#gameOverDiv {
+  width: 1000px;
+  height: 620px;
+  margin: 20px auto;
+  background-color: white;
+  position: relative;
+  z-index: 1;
+  display: none;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+#gameOverDivSubCont {
+  width: 50%;
+  padding: 25px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid rgb(255, 211, 123);
+  border-radius: 15px;
+}
+#gameOverDivSubCont img {
+  width: 75%;
+  height: 100px;
+  object-fit: contain;
+  padding-bottom: 10px;
+}
+#playAgainBtnDiv {
+  width: 100%;
+  text-align: center;
+}
+#gameOverDiv #p1 {
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 26px;
+  font-weight: 900;
+  color: rgb(255, 97, 109);
+  padding: 10px 0 0 0;
+  margin-top: 10px;
+  border-top: 3px solid rgb(255, 211, 123);
+}
+#gameOverDiv #p2 {
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 900;
+  color: rgb(100, 105, 102);
+  padding: 0 0 10px 0;
+  margin-bottom: 10px;
+  border-bottom: 3px solid rgb(255, 211, 123);
+}
+.partition {
+  width: 50%;
+}
+#gameOverDiv .labels {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: rgb(100, 105, 102);
+}
+#totalSalesDiv,
+#totalCustomersServedDiv {
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 10px;
+  color: rgb(255, 192, 55);
+}
+#sources {
+  font-size: 12px;
+  color: rgb(100, 105, 102);
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgb(207, 207, 207);
+}
+
+/* Play Again Button */
+#playAgainBtn {
+  width: 150px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 900;
+  color: white;
+  background-color: rgb(255, 97, 109);
+  border: 3px solid rgb(255, 97, 109);
+  border-radius: 10px;
+}
+#playAgainBtn:hover {
+  font-size: 20px;
+  border: 3px solid rgb(11, 161, 69);
+  background-color: rgb(11, 161, 69);
+}
+#playAgainBtn:active {
+  font-size: 19px;
+}

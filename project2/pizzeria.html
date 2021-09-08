@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maria's Pizzeria</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pizzeria.css">
+    <link rel="stylesheet" href="css/directions.css">
+
+</head>
+<body>
+
+    <div id="mainContainer">
+        <div id="directionsDiv">
+            <div id="page1" class="directions">
+                <div class="mariawithtitle">
+                    <img src="imgs/game-title/maria.png" alt="maria pizzeria" class="maria-img">
+                    <div class="game-title">
+                        <img src="imgs/game-title/game-title.png" alt="game title">
+                    </div>
+                </div>
+                <div class="statements">
+                    <h2>
+                        Hello! I’m Maria and welcome to my pizzeria!
+                    </h2>
+                    <p>
+                        I really need some help today.
+                    </p>
+                    <p>
+                        My chef is out but we need to serve the hungry customers coming in.
+                    </p>
+                    <p>
+                        Will you please help me?
+                    </p>
+                </div>
+                <div class="forbutton">
+                    <button class="for-next-page">Please teach me!</button>
+                    <button class="playBtn">Let's begin!</button>
+                </div>
+            </div>
+            <div id="page2" class="directions">
+                <div class="maria-holder">
+                    <img src="imgs/game-title/maria.png" alt="maria pizzeria" class="maria-img">
+                </div>
+                <div class="statements">
+                    <p class="specifics">
+                        Our customers are shown here.<br>
+                        They will tell us the flavor of pizza that they want in this section.
+                    </p>
+                    <div class="demopic">
+                        <img src="imgs/directions/page2.png" alt="page2">
+                    </div>
+                    <div class="forbutton">
+                        <button class="for-next-page">Got this.</button>
+                    </div>
+                </div>
+            </div>
+            <div id="page3" class="directions">
+                <div class="maria-holder">
+                    <img src="imgs/game-title/maria.png" alt="maria pizzeria" class="maria-img">
+                </div>
+                <div class="statements">
+                    <p class="specifics">
+                        The ingredients needed to make the pizza order is specified in the chef’s recipe book (1).<br>
+                        You need to click the same ingredients in the Ingredients’ Table (2) to push them to the Prep table (3).
+                    </p>
+                    <div class="demopic">
+                        <img src="imgs/directions/page3.png" alt="page3">
+                    </div> 
+                    <div class="forbutton">
+                        <button class="for-next-page">Owkay!</button>
+                    </div>
+                </div>
+            </div>
+            <div id="page4" class="directions">
+                <div class="maria-holder">
+                    <img src="imgs/game-title/maria.png" alt="maria pizzeria" class="maria-img">
+                </div>
+                <div class="statements">
+                    <p class="specifics">
+                        Once all the ingredients are in, you can now bake the pizza by clicking the Bake button (1).<br>
+                        If there’s an ingredient not in the chef’s recipe, sorry, but you need to clear the table (2) and start again.
+                    </p>
+                    <div class="demopic">
+                        <img src="imgs/directions/page4.png" alt="page4">
+                    </div>  
+                    <div class="forbutton">
+                        <button class="for-next-page">Ooh, I see.</button>
+                    </div>
+                </div>
+            </div>
+            <div id="page5" class="directions">
+                <div class="maria-holder">
+                    <img src="imgs/game-title/maria.png" alt="maria pizzeria" class="maria-img">
+                </div>
+                <div class="statements">
+                    <p class="specifics">
+                        Once the pizza is baked, you can now click the serve button.<br>    
+                        Our sales and customers served counter will now increase! Yey! 
+                    </p>
+                    <div class="demopic">
+                        <img src="imgs/directions/page5.png" alt="page5">
+                    </div>
+                    <div class="forbutton">
+                        <button class="for-next-page">Yey!</button>
+                    </div>
+                </div>
+            </div>
+            <div id="page6" class="directions">
+                <div class="maria-holder">
+                    <img src="imgs/game-title/maria.png" alt="maria pizzeria" class="maria-img">
+                </div>
+                <div class="statements">
+                    <p class="specifics">
+                        Now, we need to act fast.<br>
+                        We only have 30 seconds for each shift.<br>
+                        Serve as many customers as you can!
+                    </p>
+                    <div class="demopic">
+                        <img src="imgs/directions/page6.png" alt="page6">
+                    </div>
+                    <div class="forbutton">
+                        <button class="playBtn">PLAY</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="gameDiv">
+            <div id="infoDiv">
+                <div id="statsDiv">
+                    <div id="gameNameDiv">
+                        <img src="imgs/game-title/maria.png" alt="maria" class="mariaimg">
+                        <img src="imgs/game-title/game-title.png" alt="game logo" class="logoimg">
+                    </div>
+                    <div id="timerCont">
+                        <p>Timer</p>
+                        <div id="timerDiv"></div>
+                    </div>
+                    <div id="salesDiv">
+                        <p>Total Sales</p>
+                        <div id="salesSubDiv">
+                            <div id="sales">Php 0</div>
+                            <div id="salesPlus"></div>
+                        </div>
+                    </div>
+                    <div id="customersServedDiv">
+                        <p>Customers Served</p>
+                        <div id="customersServedSubDiv">
+                            <div id="imgwithcounter">
+                                <img src="imgs/customers/0.png" alt="happy customer" class="customerCounter">
+                                <div id="customersServed">0</div>
+                            </div>
+                            <div id="customersPlus"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="customerDiv">
+                    <div id="customerImgDiv">
+                        <img src="" alt="customer image" id="customerImg">
+                    </div>
+                    <p>I'd like to have</p>
+                    <div id="customerOrderDiv"></div>
+                </div>
+                <div id="recipeBookDiv">
+                    <div class="chefsrecipetitle">
+                        <span class="norm">Chef's</span><br>
+                        <span class="emph">Recipe</span>
+                    </div>
+                    <div id="recipeDiv"></div>
+                </div>
+            </div>
+            <div id="bakedPizzaDiv">
+                <div id="bakedPizzaImgDiv"></div>
+                <div id="servePizzaBtnDiv">
+                    <button id="servePizzaBtn" disabled>Serve this Pizza!</button>
+                </div>
+            </div>
+            <div id="chefTableDiv">
+                <div id="ingredientsMainDiv">
+                    <p>Available Ingredients</p>
+                    <div id="ingredientsDiv"></div>
+                </div>
+                <div id="prepTableMainDiv">
+                    <p id="prepTblHeader">
+                        Prep Table
+                    </p>
+                    <div id="prepTableDiv"></div>
+                    <div id="prepTableBtnsDiv">
+                        <button id="bakeBtn" disabled>Bake</button>
+                        <button id="clearBtn">Clear the table</button>
+                    </div>
+                    <div id="errorMsgDiv">Prep table is full! Clear the table!</div>
+                </div>
+            </div>
+        </div>
+        <div id="gameOverDiv">
+            <img src="imgs/game-title/maria.png" alt="maria pizzeria" class="maria-img">
+            <div id="gameOverDivSubCont">
+                <img src="imgs/game-title/game-title.png" alt="game-title">
+                <p id="p1">Shift is over!</p>
+                <p id="p2">Thank you for helping me out!</p>
+                <div class="partition">
+                    <p class="labels">Total Shift Sales:</p>
+                    <div id="totalSalesDiv"></div>
+                </div>
+                <div class="partition">
+                    <p class="labels">Happy Customers:</p>
+                    <div id="totalCustomersServedDiv"></div>
+                </div>
+                <div id="playAgainBtnDiv">
+                    <button id="playAgainBtn">PLAY AGAIN</button>
+                </div>
+                <div id="sources">
+                    Images from Canva, Vecteezy, Freepik and Jerome Tan.<br>
+                    This game is for educational purposes only. Hope you enjoyed.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        // Targeting all buttons
+        let directionsBtns = document.querySelectorAll(".for-next-page");
+        let playBtns = document.querySelectorAll(".playBtn");
+        let playAgainBtn = document.querySelector("#playAgainBtn");
+        let clearBtn = document.querySelector("#clearBtn");
+        let bakeBtn = document.querySelector("#bakeBtn");
+        let servePizzaBtn = document.querySelector("#servePizzaBtn");
+
+        // Targeting all needed Divs/Imgs
+        let directionsDiv = document.querySelector("#directionsDiv");
+        let timerDiv = document.querySelector("#timerDiv");
+        let salesDisplay = document.querySelector("#sales");
+        let salesPlus = document.querySelector("#salesPlus");
+        let customersPlus = document.querySelector("#customersPlus");
+        let customersServedDisplay = document.querySelector("#customersServed");
+        let customerImg = document.querySelector("#customerImg");
+        let customerOrderDiv = document.querySelector("#customerOrderDiv");
+        let pizzaOrderNameDiv = document.querySelector("#pizzaOrderNameDiv");
+        let recipeDiv = document.querySelector("#recipeDiv");
+        let errorMsgDiv = document.querySelector("#errorMsgDiv");
+        let ingredientsDiv = document.querySelector("#ingredientsDiv");
+        let prepTableDiv = document.querySelector("#prepTableDiv");
+        let bakedPizzaImgDiv = document.querySelector("#bakedPizzaImgDiv");
+        let gameOverDiv = document.querySelector("#gameOverDiv");
+        let totalSalesDiv = document.querySelector("#totalSalesDiv");
+        let totalCustomersServedDiv = document.querySelector("#totalCustomersServedDiv");
+
+        // Variables
+        let randomCustomerOrder = 0;
+        let sales = 0;
+        let customersServed = 0;
+        let correctIngredients = 0;
+        let wrongIngredients = false;
+        const maxIngOnTable = 6;
+        
+        // Arrays
+        let customersImgs= [
+            "imgs/customers/0.png",
+            "imgs/customers/1.png",
+            "imgs/customers/2.png",
+            "imgs/customers/3.png",
+            "imgs/customers/4.png",
+            "imgs/customers/5.png",
+            "imgs/customers/6.png",
+            "imgs/customers/7.png"
+        ]
+        let pizzaRecipes = [
+            {
+                id: 1,
+                flavor: 'Cheese Pizza',
+                ingredients: [
+                    'White Sauce',
+                    'Mozzarella Cheese'
+                ],
+                imgsrc: 'imgs/pizzas/Cheese Pizza.png',
+                price: 500
+            },
+            {
+                id: 2,
+                flavor: 'Bacon Pizza',
+                ingredients: [
+                    'White Sauce',
+                    'Mozzarella Cheese',
+                    'Bacon',
+                    'Parsley Leaves'
+                ],
+                imgsrc: 'imgs/pizzas/Bacon Pizza.png',
+                price: 700
+            },
+            {
+                id: 3,
+                flavor: 'Pepperoni Pizza',
+                ingredients: [
+                    'Red Sauce',
+                    'Mozzarella Cheese',
+                    'Pepperoni'
+                ],
+                imgsrc: 'imgs/pizzas/Pepperoni Pizza.png',
+                price: 600
+            },
+            {
+                id: 4,
+                flavor: 'Hawaiian Pizza',
+                ingredients: [
+                    'Red Sauce',
+                    'Mozzarella Cheese',
+                    'Ham',
+                    'Pineapple Chunks'
+                ],
+                imgsrc: 'imgs/pizzas/Hawaiian Pizza.png',
+                price: 700
+            },
+            {
+                id: 5,
+                flavor: 'Supreme Pizza',
+                ingredients: [
+                    'Red Sauce',
+                    'Mozzarella Cheese',
+                    'Green Bell Pepper',
+                    'Ham',
+                    'Beef'
+                ],
+                imgsrc: 'imgs/pizzas/Supreme Pizza.png',
+                price: 800
+            }
+        ]  
+        let ingredients = [
+            {ingName: 'Red Sauce', source: "imgs/ingredients/Red Sauce.png"},
+            {ingName: 'White Sauce', source: "imgs/ingredients/White Sauce.png"},
+            {ingName: 'Green Bell Pepper', source: "imgs/ingredients/Green Bell Pepper.png"},
+            {ingName: 'Parsley Leaves', source: "imgs/ingredients/Parsley Leaves.png"},
+            {ingName: 'Pineapple Chunks', source: "imgs/ingredients/Pineapple Chunks.png"},
+            {ingName: 'Mozzarella Cheese', source: "imgs/ingredients/Mozarella Cheese.png"},
+            {ingName: 'Pepperoni', source: "imgs/ingredients/Pepperoni.png"},
+            {ingName: 'Beef', source: "imgs/ingredients/Beef.png"},
+            {ingName: 'Bacon', source: "imgs/ingredients/Bacon.png"},
+            {ingName: 'Ham', source: "imgs/ingredients/Ham.png"},
+        ]
+        let ingredientsOnTable = [];
+        
+        // Functions subject to reusing
+        function timerStart(){
+            let timer = 3000;
+            timerDiv.textContent = timer;
+            setInterval(
+                function (){
+                    if (timer > 0) {
+                        timer = timer - 1;
+                        timerDiv.textContent = timer;
+                    };
+                },
+                1000
+            );
+            setTimeout( function(){
+                    totalSalesDiv.textContent = `Php ${sales}`;
+                    totalCustomersServedDiv.textContent = customersServed;
+                    gameOverDiv.style.display = "flex";
+                    gameDiv.style.display = "none";
+                },
+                timer*1000
+            );
+        };
+        function newCustomer() {
+            let randomCustomerNum = Math.floor(Math.random()*(customersImgs.length));
+            customerImg.src = customersImgs[randomCustomerNum];
+        }
+        function newOrderWithRecipe() {
+            // Random Flavor
+            randomCustomerOrder = Math.floor(Math.random()*(pizzaRecipes.length));
+            customerOrderDiv.textContent = pizzaRecipes[randomCustomerOrder].flavor;
+
+            // Recipe Book Ingredients
+            pizzaRecipes[randomCustomerOrder].ingredients.forEach(function(ingredient){
+                let ingredientHolder = document.createElement("div");
+                ingredientHolder.classList.add("ingredientHolder")
+                let ingredientImg = document.createElement("img");
+                ingredientImg.src = `imgs/ingredients/${ingredient}.png`;
+                ingredientImg.classList.add("ingredientImg");
+                ingredientHolder.append(ingredientImg);
+                recipeDiv.append(ingredientHolder);
+            });
+        };
+        function enableIngBtns(){
+            let ingredientHolders = document.querySelectorAll("#ingredientsDiv button");
+            ingredientHolders.forEach(function(ingredientHolder){
+                ingredientHolder.disabled = false;
+            });
+        };
+        function disableIngBtns(){
+            let ingredientHolders = document.querySelectorAll("#ingredientsDiv button");
+            ingredientHolders.forEach(function(ingredientHolder){
+                ingredientHolder.disabled = true;
+            });
+        };
+        function clearPrepTable(){
+            let prepTableIngBoxes = document.querySelectorAll("#prepTableDiv div");
+            prepTableIngBoxes.forEach(function(prepTableIngBox){
+                prepTableIngBox.remove();            
+            });
+            bakeBtn.disabled = true;
+            enableIngBtns();
+            errorMsgDiv.style.display = "none";
+            ingredientsOnTable = [];
+            correctIngredients = 0;
+            wrongIngredients = false;
+        };
+        function recipeBookReset(){
+            let ingredientHolders = document.querySelectorAll("#recipeDiv div");
+            ingredientHolders.forEach(function(ingredientHolder){
+                ingredientHolder.remove();
+            });
+        };
+        function clearPizza() {
+            servePizzaBtn.disabled = true;
+            let bakedPizzaImg = document.querySelector("#bakedPizzaImgDiv img");
+            if (bakedPizzaImg != null) {
+                bakedPizzaImg.remove();
+            };
+        };
+
+        // Directions button next page
+        directionsBtns.forEach(function(directionsBtn){
+            directionsBtn.addEventListener("click", function(){
+                directionsBtn.closest(".directions").style.display = "none";
+                directionsBtn.closest(".directions").nextElementSibling.style.display = "flex";
+            })
+        });
+
+        // Play button event listener
+        playBtns.forEach(function(playBtn) {
+            playBtn.addEventListener("click", function(){
+                directionsDiv.style.display = "none";
+                gameDiv.style.display = "flex";
+                timerStart();
+                newCustomer();
+                newOrderWithRecipe();
+            });
+        });
+
+        // Generate table of ingredients in the Prep Table with Click event listener
+        ingredients.forEach(function(ingredient){
+
+            // Generate buttons and images
+            let ingredientHolder = document.createElement("button");
+            ingredientHolder.classList.add("ingredientHolder");
+            let ingredientImg = document.createElement("img");
+            ingredientImg.src = `imgs/ingredients/${ingredient.ingName}.png`;
+            ingredientImg.classList.add("ingredientImg");
+            ingredientHolder.append(ingredientImg);
+            ingredientsDiv.append(ingredientHolder);
+
+            // Add event listener
+            ingredientHolder.addEventListener("click", function() {
+                
+                // Record clicked ingredient
+                ingredientsOnTable.push(ingredient.ingName);
+                ingredientHolder.disabled = true;
+             
+                // Create boxes and imgs in #prepTableDiv if <= set max# of ing on table
+                if (ingredientsOnTable.length <= maxIngOnTable) {
+                    let prepTableIngBox = document.createElement("div");
+                    prepTableIngBox.classList.add("ingredientHolder");
+                    let prepTableIngImg = document.createElement("img");
+                    prepTableIngImg.src = `imgs/ingredients/${ingredient.ingName}.png`;
+                    prepTableIngImg.classList.add("ingredientImg");
+                    prepTableIngBox.append(prepTableIngImg);
+                    prepTableDiv.append(prepTableIngBox);
+                    if (ingredientsOnTable.length == maxIngOnTable) {
+                        disableIngBtns();
+                        errorMsgDiv.style.display = "flex";
+                    };
+                };
+                
+                // Checking if clicked ing is correct
+                if (pizzaRecipes[randomCustomerOrder].ingredients.indexOf(ingredient.ingName) >= 0 ) {
+                    correctIngredients += 1;
+                }
+                else {
+                    wrongIngredients = true;
+                };
+
+                // Checking if ingredients are complete
+                if ((correctIngredients == pizzaRecipes[randomCustomerOrder].ingredients.length) &&
+                    (wrongIngredients == false)) {
+                    bakeBtn.disabled = false;
+                }
+                else {
+                    bakeBtn.disabled = true;
+                };
+            });
+        });
+
+        // Clear Button Event
+        clearBtn.addEventListener("click", function(){
+            clearPrepTable();
+        });
+
+        // Bake button event
+        bakeBtn.addEventListener("click", function(){
+            let bakedPizzaImg = document.createElement("img");
+            bakedPizzaImg.classList.add("bakedPizzaImg");
+            bakedPizzaImg.src = pizzaRecipes[randomCustomerOrder].imgsrc;
+            bakedPizzaImgDiv.append(bakedPizzaImg);
+            bakeBtn.disabled = true;
+            servePizzaBtn.disabled = false;
+            clearPrepTable();
+            disableIngBtns();
+        });
+
+        // Serve button event
+        servePizzaBtn.addEventListener("click", function(){
+            //Add sales and customer count
+            salesPlus.textContent = `+ ${pizzaRecipes[randomCustomerOrder].price}`
+            customersPlus.textContent = `+ 1`
+            salesPlus.classList.add("fade");
+            customersPlus.classList.add("fade");
+            setTimeout(function(){
+                salesPlus.classList.remove("fade");
+                customersPlus.classList.remove("fade");
+            }, 1000)
+            sales += pizzaRecipes[randomCustomerOrder].price;
+            salesDisplay.textContent = `Php ${sales}`;
+            customersServed ++;
+            customersServedDisplay.textContent = customersServed;
+            
+            // Call functions to set up new order
+            clearPizza()
+            recipeBookReset();
+            clearPrepTable();
+            newCustomer();
+            newOrderWithRecipe();
+        });
+        
+        // Play again button
+        playAgainBtn.addEventListener("click", function(){
+            gameOverDiv.style.display = "none";
+            gameDiv.style.display = "flex";
+            sales = 0;
+            customersServed = 0;
+            salesDisplay.textContent = `Php ${sales}`;
+            customersServedDisplay.textContent = customersServed;
+            clearPizza();
+            recipeBookReset();
+            clearPrepTable();
+            timerStart();
+            newCustomer();
+            newOrderWithRecipe();
+        });
+
+    </script>
+    
+</body>
+</html>
